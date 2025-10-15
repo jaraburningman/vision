@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../public/Roboto-Regular-webfont.ttf') format('truetype'),
+       url('../../public/Roboto-Regular-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+html, body {
+  background-color: #e8e8e8;
+  background: url(../../public/redwood.png);
+  background-size: cover;
+  background-position: left center;
+  background-color: rgba(255,255,255,0.2);
+  background-blend-mode: lighten;
+  min-height: 100vh;
+  color: #333;
+}
+
+* {
+  font-family: 'Roboto', "Helvetica Neue";
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+#popover-toggle {
+  position: fixed;
+  text-align: center;
+  anchorName: --menu;
+  font-size: 35px;
+  top: 30px;
+  left: 30px;
+  padding: 0 10px 5px 10px;
+  background: white;
+  align-content: center;
+}
+
+#popover-menu {
+  positionAnchor: --menu;
+  top: calc(anchor(bottom) + 10px);
+  margin-left: 30px;
+}
+
+#popover-menu,
+#popover-menu a:visited {
+  font-family: 'Roboto', "Helvetica Neue";
+  color: #333333;
+}
+
+#popover-toggle,
+#popover-menu {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#popover-menu a {
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+}
+
+#popover-toggle:hover {
+  background: #f2f2f2;
+}
+
+#popover-menu a:hover {
+  background: #f2f2f2;
+}
+
+main {
+  padding: 30px 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 120px 30px;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
