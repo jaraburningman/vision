@@ -10,7 +10,7 @@ export default function Layout() {
     <div>
       <button id="popover-toggle" popoverTarget="popover-menu">☰</button>
       <div id="popover-menu" popover="auto">
-        <Link to="/" onClick={closePopover}>Hello World!</Link>
+        <Link to="/" onClick={closePopover}>Hello Convolutional Neural Networks</Link>
         <Link to="/facial-expressions" onClick={closePopover}>Facial Expressions (FaceAPI)</Link>
         <Link to="/" onClick={closePopover}>Objects Detection (YOLOv12)</Link>
         {/*https://github.com/sitammeur/YoloDetect*/}
