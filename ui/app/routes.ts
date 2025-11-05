@@ -1,6 +1,7 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 import { CONSTANTS } from "./context/constants-context.jsx";
 
+
 export default [
   route(process.env.PUBLIC_URL, "layout/layout.tsx", [
     index("routes/hello/hello.tsx"),
