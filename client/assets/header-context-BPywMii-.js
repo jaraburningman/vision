@@ -1,0 +1,1 @@
+import{r as e,j as c}from"./chunk-OIYGIGL5-B6SvBvvm.js";const t=e.createContext();function x(){return e.useContext(t)}function d({children:r}){const[s,o]=e.useState("Welcome"),[n,a]=e.useState(""),i={title:s,setTitle:o,description:n,setDescription:a};return c.jsx(t.Provider,{value:i,children:r})}export{d as H,x as u};
