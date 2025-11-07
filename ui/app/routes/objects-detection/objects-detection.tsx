@@ -11,7 +11,7 @@ import { useHeader } from "../../context/header-context";
 import { useConstants } from "../../context/constants-context";
 import { CONSTANTS } from "../../context/constants-context";
 
-const description = "Ultralytics YOLOv12 model for object detection, segmentation and pose estimation.";
+const description = "Ultralytics's ML/AI model for object detection, segmentation and pose estimation.";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -42,7 +42,7 @@ const ObjectsDetection = () => {
   const { setTitle, setDescription } = useHeader();
   const { TITLES } = useConstants();
   useEffect(() => {
-    setTitle(TITLES.OBJECTS_DETECTION);
+    setTitle('Yolo12 model + React Router playground');
     setDescription(description);
   }, [setTitle, setDescription, TITLES.OBJECTS_DETECTION]);
 
