@@ -56,9 +56,8 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
   // Init camera
   useEffect(() => {
     console.log(tf.getBackend ());
-    setTimeout(() => {
-      cameraHandler()
-    }, 500)
+    // Start camera
+    cameraHandler()
     return () => {
       // Destroy casemra
       // if (streaming === "camera") {
@@ -109,7 +108,7 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
           if (streaming === "image") closeImage(); // closing image streaming
           const url = URL.createObjectURL(e.target.files[0]); // create blob url
           videoRef.current.src = url; // set video source
-          videoRef.current.addEventListener("ended", () => closeVideo()); // add ended video listener
+          // videoRef.current.addEventListener("ended", () => closeVideo()); // add ended video listener
           videoRef.current.style.display = "block"; // show video
           setStreaming("video"); // set streaming to video
         }}

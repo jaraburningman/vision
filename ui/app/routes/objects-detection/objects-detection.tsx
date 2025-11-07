@@ -11,7 +11,7 @@ import { useHeader } from "../../context/header-context";
 import { useConstants } from "../../context/constants-context";
 import { CONSTANTS } from "../../context/constants-context";
 
-const description = "Ultralytics YOLOv12 is a versatile model that excels in object detection, segmentation, image classification and pose estimation.";
+const description = "Ultralytics YOLOv12 model for object detection, segmentation and pose estimation.";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -52,7 +52,8 @@ const ObjectsDetection = () => {
     inputShape: [1, 0, 0, 3],
   }); // init model & input shape
 
-  const modelName = 'yolo12n';
+  const isProd = process.env.NODE_ENV === 'production';
+  const modelName = isProd ? '/vision/yolo12n' : 'yolo12n';
 
   // references
   const imageRef = useRef(null);
@@ -119,11 +120,13 @@ const ObjectsDetection = () => {
         />
       </div>
 
-      <ButtonHandler
-        imageRef={imageRef}
-        cameraRef={cameraRef}
-        videoRef={videoRef}
-      />
+      {!loading.loading && (
+        <ButtonHandler
+          imageRef={imageRef}
+          cameraRef={cameraRef}
+          videoRef={videoRef}
+        />
+      )}
 
     </div>
   );
